@@ -1,0 +1,122 @@
+.container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 40px;
+
+}
+
+
+.Offering {
+    margin: auto;
+    text-align: center;
+    line-height: 15px;
+}
+
+.Offering h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #f50123;
+    font-size: 1.5rem;
+}
+
+.Offering h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Abel', 'sans-serif';
+}
+
+.productitem {
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.24);
+    padding: 30px 0;
+    width: 280px;
+    height: 300px;
+    margin: 100px 20px;
+    background-color: #e4dfdf;
+    transition: all .5s ease-in-out;
+
+    border-radius: 10px;
+}
+
+.productitem img {
+    padding-top: 20px;
+    width: 60%;
+    filter: drop-shadow(15px 5px 10px black);
+
+}
+
+.productitem h3 {
+    font-size: 1.8rem;
+    line-height: 25px;
+    color: #861726;
+    transition: all .7s ease;
+
+}
+
+.productitem:hover {
+    background-color: #e7272d;
+    transform: translateY(-30px);
+    transition: all .5s ease;
+}
+
+.productitem:hover h3 {
+    color: white;
+    font-size: 2rem;
+    transform: translateY(20px);
+    transition: all .7s ease;
+}
+
+.productitem:hover img {
+    width: 70%;
+    transform: translateY(20px);
+    overflow: visible;
+    filter: drop-shadow(15px 5px 20px black);
+    transition: all .6s ease;
+}
+
+/* media query */
+@media screen and (max-width:1100px) {
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 10%;
+    }
+
+    .Offering {
+        margin: auto;
+        margin-bottom: 100px;
+        text-align: center;
+        line-height: 15px;
+    }
+
+    .Offering h3 {
+        font-size: 1.5rem;
+    }
+
+    .Offering h2 {
+        font-size: 1.8rem;
+    }
+
+    .productitem {
+        margin: auto;
+        padding: 20px auto;
+        width: 230px;
+        height: 250px;
+        margin: 20px auto;
+    }
+
+    .productitem img {
+        padding-top: 5px;
+        width: 70%;
+        filter: drop-shadow(15px 5px 10px black);
+
+    }
+
+    .productitem h3 {
+        font-size: 1.8rem;
+        line-height: 25px;
+        color: #a10b1f;
+    }
+}

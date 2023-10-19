@@ -1,0 +1,184 @@
+.Testimonial {
+    margin: 100px auto;
+    text-align: center;
+    line-height: 15px;
+    background-image: url(../../assets/mg_main.png);
+}
+
+.Testimonial_head h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #f50123;
+    font-size: 1.5rem;
+}
+
+.Testimonial_head h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Abel', 'sans-serif';
+}
+
+.testimonial_review {
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+}
+
+figure.card {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 350px;
+    max-height: 550px;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    background-color: #c5c8cf;
+    padding: 20px;
+    border-radius:10px;
+    background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: url(../../assets/doodle_bg.png);
+    background-position: center;
+    background-size: 40%;
+}
+
+figure.card *,
+figure.card *:before,
+figure.card *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+figure.card figcaption {
+    width: 100%;
+}
+
+figure.card h2,
+figure.card h4,
+figure.card blockquote {
+    margin: 0;
+
+}
+
+figure.card h2,
+figure.card h4 {
+    font-weight: 300;
+    line-height: 20px;
+}
+
+figure.card h2 {
+    padding-top: 25px;
+    color: #393838;
+    font-size: 1.4rem;
+}
+
+figure.card h4 {
+    color: #7f7f7f;
+}
+
+figure.card blockquote {
+    font-size: .9rem;
+    padding: 10px 40px ;
+    margin-top: 10px;
+    color: #000000;
+    background-color: #fdfcfc;
+    border-radius:20px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+}
+
+figure.card blockquote p{
+    opacity: .7;
+    line-height: 20px;
+    /* letter-spacing: .5px; */
+    /* text-align: justify; */
+}
+
+figure.card blockquote:before {
+    font-family: 'FontAwesome';
+    content: "\201C";
+    position: absolute;
+    font-size: 70px;
+    opacity: 0.5;
+    font-style: normal;
+    left: 20px;
+    top: 15px;
+}
+
+figure.card .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+    margin: 10px auto;
+    border: solid 5px #A6A57A;
+}
+
+@media screen and (max-width:500px){
+
+    .Testimonial {
+        margin: 50px auto;
+        text-align: center;
+    }
+    
+    .Testimonial_head h2 {
+        font-weight: 300;
+        font-size: 1.7rem;
+    }
+    
+    .testimonial_review {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        margin: 5px auto;
+    }
+    
+    figure.card {
+        margin: 0 auto;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-width: 250px;
+        max-width: 300px;
+        max-height: 450px;
+        width: 80%;
+        text-align: center;
+        font-size: 1rem;
+        background-color: #c5c8cf;
+        padding: 20px;
+        border-radius:10px;
+    }
+
+    figure.card figcaption {
+        width: 100%;
+    }
+        
+    figure.card blockquote {
+        font-size: .9rem;
+        padding: 5px 20px ;
+    }
+    
+    figure.card blockquote p{
+        opacity: .7;
+        line-height: 20px;
+    }
+    
+    
+    figure.card .profile {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+        margin: 10px auto;
+        border: solid 5px #A6A57A;
+    }
+}

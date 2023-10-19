@@ -1,0 +1,19 @@
+.MenuContainer{
+    max-width: 80%;
+    min-height: 500px;
+    margin: 20px auto;
+}
+
+.product_cointainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width:1200px){
+
+    .MenuContainer{
+        max-width: 90%;
+        min-height: 500px;
+        margin: 20px auto;
+    }
+}

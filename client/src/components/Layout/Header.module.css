@@ -1,0 +1,253 @@
+.header {
+  margin: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+
+}
+
+.links .link_icon {
+  text-decoration: none;
+  color: black;
+}
+
+.links .headicon {
+  font-size: 19px;
+  transform: translateY(2px);
+}
+
+.links .link_icon:hover,
+.links .link_icon:active {
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.link_icon {
+  margin: auto 10px;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.auth_btn button ,
+.auth_btn a {
+  margin: auto 20px;
+  margin-right: 5px;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-size: .9rem;
+  transition: ease-out 0.5s;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid black;
+
+  &:hover {
+    box-shadow: inset 0 -80px 0 0 #fff;
+    color: #000;
+    cursor: pointer;
+    
+  }
+  &:active {
+    transform: scale(0.9);
+}
+}
+
+
+.header h2 {
+  font-size: 1.7rem;
+}
+
+.main-image {
+  margin: 20px auto;
+  width: 100%;
+  height: 80vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.header .links .link_icon {
+  padding: .6rem;
+  border-radius: 12px;
+  margin-right: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  transition: all .3s;
+}
+
+.header .links .link_icon:hover {
+  background-image: linear-gradient(90deg, transparent 0%, transparent 50%, #ff6200d6 50%);
+  background-size: 200%;
+  background-position: 100%;
+}
+
+.header .links .link_icon:active {
+  transform: translateY(5px);
+}
+
+.links .cartbtn:active {
+  transition: all .6s;
+  transform: translateY(3px);
+  animation: all .5s ease-out;
+}
+
+
+/* media query */
+
+@media screen and (max-width:700px) {
+
+  .header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    margin: 0;
+  }
+
+  .links .headicon {
+    font-size: 13px;
+  }
+
+  .link_icon {
+    margin: auto 2px;
+    font-size: 1rem;
+  }
+
+  .link_icon span {
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    align-items: center;
+  }
+
+
+  .link_icon:nth-last-child(2) {
+    margin-right: 0px;
+    display: none;
+  }
+
+  .header .headlogo {
+    margin: 5px;
+    margin-right: 15px;
+  }
+
+  .header h2 {
+    margin: 2px;
+    padding: 0 10%;
+    font-size: 1rem;
+    line-height: 17px;
+
+  }
+
+  .header span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .header .links .link_icon {
+    padding: .6rem;
+    background: #dddbdb;
+    border-radius: 12px;
+    margin-right: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+
+  }
+
+}
+
+@media screen and (max-width:500px) {
+
+  .header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    margin: 0;
+  }
+
+  .links .headicon {
+    font-size: 13px;
+  }
+
+  .link_icon {
+    margin: auto 2px;
+    font-size: 1rem;
+  }
+
+  .link_icon span {
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    align-items: center;
+  }
+
+
+  .link_icon:nth-last-child(2) {
+    margin-right: 0px;
+    display: none;
+  }
+
+  .header .headlogo {
+    margin: 5px;
+    margin-right: 15px;
+  }
+
+  .header h2 {
+    margin: 2px;
+    padding: 0 10%;
+    font-size: 1rem;
+    line-height: 17px;
+
+  }
+
+  .header span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .header .links .link_icon {
+    padding: .6rem;
+    background: #dddbdb;
+    border-radius: 12px;
+    margin-right: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+
+  }
+
+}

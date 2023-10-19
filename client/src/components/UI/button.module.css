@@ -1,0 +1,26 @@
+ .Button_ani {
+    font: inherit;
+    cursor: pointer;
+    padding: .8rem 1.5rem;
+    border: 1px solid #ffffff;
+    background-color: #3c3535;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    transition: all .5s;
+  }
+  
+   .Button_ani:hover {
+    background-image: linear-gradient(120deg,transparent 0%,transparent 50%,#fefefe 50%);
+    background-size: 220%;
+    background-position: 100%;
+    color: #2e2626;
+    
+    border-color: #510674;
+  }
+  
+   .Button_ani:active{
+    transform: translateY(2px);
+  }
+  

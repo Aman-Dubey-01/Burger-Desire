@@ -1,0 +1,94 @@
+/* .meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+} */
+
+.meal_section {
+  margin: auto;
+  text-align: center;
+  background-image: url(../../assets/mg_main.png);
+  /* line-height: 15px; */
+}
+
+.meal_sec__head h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #f50123;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.meal_sec__head h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: 'Abel', 'sans-serif';
+}
+
+.meal_section .button_meal {
+  margin-top: 50px;
+}
+
+.MealsLoading {
+  text-align: center;
+  color: white;
+}
+
+.MealsError {
+  text-align: center;
+  color: red;
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* media query */
+@media screen and (max-width:600px) {
+
+
+  .meal_sec__head h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .meal_sec__head h2 {
+    font-size: 1.8rem;
+  }
+
+  .meal_section .button_meal {
+    margin-top: 20px;
+  }
+
+  .MealsLoading {
+    text-align: center;
+    color: white;
+  }
+
+  .MealsError {
+    text-align: center;
+    color: red;
+  }
+
+  .meals ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
