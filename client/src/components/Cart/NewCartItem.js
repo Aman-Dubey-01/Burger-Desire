@@ -10,8 +10,7 @@ const NewCartItem = (props) => {
 
       <tr className={classes['cart-item']}>
         <td className={classes.firsttd} >
-          <span><img className={classes.cart_image} src={props.url} alt="product image" /><h2>{props.name}</h2></span>
-          {/* <span><h2>{props.name}</h2></span> */}
+          <span><img className={classes.cart_image} src={props.url} alt="product" /><h2>{props.name}</h2></span>
         </td>
         <td><span className={classes.price}>{price}</span></td>
         <td>

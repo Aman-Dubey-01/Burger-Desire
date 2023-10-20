@@ -15,8 +15,6 @@ function NewCart() {
     const deliverycharge = +50;
 
 
-
-
     const grandAmount = `₹${(cartCtx.totalAmount + deliverycharge).toFixed(2)}`;
     const hasItems = cartCtx.items.length > 0;
 
@@ -25,7 +23,14 @@ function NewCart() {
     };
 
     const cartItemAddHandler = (item) => {
-        cartCtx.addItem(item);
+        // cartCtx.addItem(item);
+        cartCtx.addItem({
+            id: item.id,
+            name: item.name,
+            amount: 1,
+            url:item.url,
+            price: item.price
+          });
     };
 
 
