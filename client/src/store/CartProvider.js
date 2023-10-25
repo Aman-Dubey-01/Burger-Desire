@@ -1,11 +1,14 @@
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
 
 import CartContext from './cart-context';
+
+const CART_STORAGE_KEY = 'cartData';
 
 const defaultCartState = {
   items: [],
   totalAmount: 0,
 };
+
 
 const cartReducer = (state, action) => {
   if (action.type === 'ADD') {
@@ -54,6 +57,7 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount
     };
   }
+  
 
   if (action.type === 'FETCH_DATA') {
     return {...state,
@@ -64,6 +68,16 @@ const cartReducer = (state, action) => {
     return defaultCartState;
   }
 
+
+   //setting cartstate to session storage
+   if (action.type === 'SET') {
+    return {
+      ...state,
+      items: action.data.items,
+      totalAmount: action.data.totalAmount,
+    };
+  }
+
   return defaultCartState;
 };
 
@@ -72,6 +86,25 @@ const CartProvider = (props) => {
     cartReducer,
     defaultCartState
   );
+
+  // trying to preserve cart state on page refresh
+  
+  useEffect(() => {
+    const storedCartData = JSON.parse(sessionStorage.getItem(CART_STORAGE_KEY));
+    console.log('Stored Cart Data:', storedCartData);
+    if (storedCartData) {
+      dispatchCartAction({ type: 'SET', data: storedCartData });
+    }
+  }, []);
+  
+
+  useEffect(() => {
+    sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartState));
+  }, [cartState]);
+  
+// trying to preserve cart state on page refresh
+
+
 
   const addItemToCartHandler = (item) => {
     dispatchCartAction({ type: 'ADD', item: item });

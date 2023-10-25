@@ -1,0 +1,36 @@
+.order {
+  padding: 20px 40px;
+  margin: 20px auto;
+  border: 1px solid lightgray;
+  background-color: #fdfdfd;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #00000033;
+}
+
+.order .payment-product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.order_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order_details .order__id {
+  font-size: .8rem;
+  font-weight: 400;
+  color: #333;
+  margin: 5px 0;
+}
+.order_details .order__id span{
+  color: rgb(212, 40, 40);
+}
+
+.order_details .order__total {
+  font-weight: 500;
+  color: rgb(166, 39, 39);
+  font-size: .9rem;
+}

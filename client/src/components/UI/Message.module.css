@@ -1,0 +1,58 @@
+.error-message {
+    width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+}
+  
+    .error-message img {
+      width: 30%;
+    }
+
+    .error-message h2 {
+      margin: 5px;
+      letter-spacing: 0.5px;
+      font-family: "Abel", sans-serif;
+      color: #644c10;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  
+    .error-message .btn {
+      margin: 10px;
+      border: 1px solid;
+      padding: 8px 20px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+      font-size: 0.9rem;
+      border-color: #a88734 #9c7e31 #846a29;
+      color: #111;
+      transition: 0.3s all ease;
+    }
+    .error-message .signin-btn {
+      background: #f0c14b;
+    }
+    
+    .error-message .create-btn {
+      background: #d8d7d2;
+    }
+  
+    
+    .error-message .btn:hover,
+    .error-message .btn:focus{
+      background: #f0c14b;
+      cursor: pointer;
+      opacity: 0.8;
+      transform: scale(1.05) translateY(-1px);
+      /* // background: #ab9774; */
+      border-color: rgb(227, 229, 230);
+    }
+    .error-message .btn:active {
+      transform: scale(.9) translateY(1px);
+      background: #ebdcb1;
+      border-color: rgb(227, 229, 230);
+    }
+  
+  

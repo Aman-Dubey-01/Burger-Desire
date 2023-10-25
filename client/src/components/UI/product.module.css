@@ -1,14 +1,15 @@
 .product_image {
-  padding-top: 10px;
-  width: 80%;
+  margin-top: 20px;
+  width: 85%;
   height: 12em;
+  border-radius: 8px;
   object-fit: cover;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 320px;
-  margin: 40px 1rem;
+  max-width: 330px;
+  margin: 20px 1rem;
   text-align: center;
   font-family: arial;
   background-color: #ebe8e6;
@@ -18,7 +19,7 @@
   font-family: 'Abel', sans-serif;
   font-weight: 600;
   margin: .3rem 0 0.3rem 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   letter-spacing: .4px;
 }
 

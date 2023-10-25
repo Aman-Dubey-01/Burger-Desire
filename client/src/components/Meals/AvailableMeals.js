@@ -6,46 +6,29 @@ import classes from './AvailableMeals.module.css';
 import { responsive } from './MealItem/data';
 import { Button } from '../UI/Button';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
 
+
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(
-        'https://amandubeyroxx-default-rtdb.asia-southeast1.firebasedatabase.app/.json'
-      );
+        try {
+          const response = await axios.get('/products/fetch');
+          const product = response.data.products;
+          setMeals(product);
+        } catch (error) {
+          setHttpError(error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
 
-      if (!response.ok) {
-        throw new Error('Something went wrong!');
-      }
-
-      const responseData = await response.json();
-
-      const loadedMeals = [];
-
-      for (const key in responseData) {
-        loadedMeals.push({
-          id: key,
-          name: responseData[key].Name,
-          category: responseData[key].Category,
-          price: responseData[key].Price,
-          url: responseData[key].img
-        });
-      }
-
-      setMeals(loadedMeals);
-      console.log(loadedMeals);
-      setIsLoading(false);
-    };
-
-    fetchMeals().catch((error) => {
-      setIsLoading(false);
-      setHttpError(error.message);
-    });
-  }, []);
+    fetchMeals();
+}, []);
 
   if (isLoading) {
     return (
@@ -66,13 +49,12 @@ const AvailableMeals = () => {
   // offline data
   const mealsList = meals.map((meal) => (
     <MealItem
-      key={meal.id}
-      id={meal.id}
-      name={meal.name}
-      category={meal.category}
-      price={meal.price}
-      url={meal.url}
-    // url={meal.imageurl}
+      key={meal._id}
+      id={meal._id}
+      name={meal.Name}
+      category={meal.Category}
+      price={meal.Price}
+      url={meal.img}
     />
   ));
 

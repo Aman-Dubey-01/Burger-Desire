@@ -4,7 +4,7 @@ import HeaderCartButton from './HeaderCartButton';
 import classes from './Header.module.css';
 import { FaHome } from 'react-icons/fa';
 import { MdFastfood } from 'react-icons/md';
-import { GrMapLocation } from 'react-icons/gr';
+import { BsFillBagCheckFill } from 'react-icons/bs';
 import { UserContext } from '../../store/userContext';
 import { toast } from 'react-hot-toast';
 import axios from 'axios';
@@ -38,7 +38,7 @@ const Header = (props) => {
         <div className={classes.links} >
           <Link to='/' className={classes.link_icon}> <span><FaHome className={classes.headicon} /></span>  Home</Link>
           <Link to='/Menu' className={classes.link_icon}><span><MdFastfood className={classes.headicon} /></span> Menu</Link>
-          <Link to='/' className={classes.link_icon}><span><GrMapLocation className={classes.headicon} /></span> Locate</Link>
+          <Link to='/orders' className={classes.link_icon}><span><BsFillBagCheckFill className={classes.headicon} /></span> Orders</Link>
           <Link to='/Cart' className={classes.cartbtn} ><HeaderCartButton onClick={props.onShowCart} /></Link>
           {user ?
             <div className={classes.auth_btn} onClick={logoutHandler}>

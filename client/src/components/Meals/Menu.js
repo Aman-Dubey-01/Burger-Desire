@@ -10,15 +10,16 @@ function Menu({ mealData }) {
 
   const uniqueList = ["Pizza", "Burger", "Sandwich", "Pasta", "Indian", "Chinese", "All"];
   const [meals, setMeals] = useState(mealData);
+  console.log("mealData",mealData);
 
   const mealsList = meals.map((meal) => (
     <MealItem
-      key={meal.id}
-      id={meal.id}
-      name={meal.name}
-      category={meal.category}
-      price={meal.price}
-      url={meal.url}
+      key={meal._id}
+      id={meal._id}
+      name={meal.Name}
+      category={meal.Category}
+      price={meal.Price}
+      url={meal.img}
     />
   ));
 
@@ -29,7 +30,7 @@ function Menu({ mealData }) {
     }
 
     const updatedList = mealData.filter((curElem) => {
-      return curElem.category === category;
+      return curElem.Category === category;
     });
 
     setMeals(updatedList);

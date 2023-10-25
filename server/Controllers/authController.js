@@ -92,6 +92,7 @@ const getUser = async (req, res) => {
     }
 }
 
+
 const logoutUser = async (req, res) => {
     try {
         res.clearCookie('token');
@@ -100,5 +101,8 @@ const logoutUser = async (req, res) => {
         console.log(error);
     }
 }
+
+
+
 
 module.exports = { registerUser, loginUser, getUser, logoutUser };
