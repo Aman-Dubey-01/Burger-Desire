@@ -83,7 +83,7 @@ function Auth() {
                 toast.error(data.error)
             } else {
                 console.log("user signin:", data);
-                // setUser(data)  //remove if not needed
+                setUser(data)  //remove if not needed
                 setSignIn({ email: '', password: '' })
                 toast.success(data.message)
                 navigate('/')

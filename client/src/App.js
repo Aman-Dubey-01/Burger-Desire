@@ -43,7 +43,6 @@ function App() {
           <Route path="/payment" element=<Payment /> />
           <Route path="/checkout" element=<Checkout /> />
           <Route path="/orders" element=<Orders /> />
-          
           <Route path="/Menu" element=<FetchData /> />
           <Route path="/auth" element=<Auth /> />
         </Routes>

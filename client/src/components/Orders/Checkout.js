@@ -6,6 +6,7 @@ import axios from 'axios';
 import SmallCartItem from '../Cart/SmallCartItem';
 import { UserContext } from '../../store/userContext';
 import Message from '../UI/Message';
+import { toast } from 'react-hot-toast';
 
 const Checkout = () => {
     const navigate = useNavigate();
@@ -14,7 +15,6 @@ const Checkout = () => {
     const { items } = cartCtx;
     const [disabled, setDisabled] = useState(true);
     const [grandAmount, setGrandAmount] = useState(0);
-    const [paymentSubmitted, setPaymentSubmitted] = useState(false);
     const [shipping, setShipping] = useState({
         name: '',
         phone: '',
@@ -61,13 +61,13 @@ const Checkout = () => {
             });
 
             if (response.status === 201) {
-                setPaymentSubmitted(true);
-                alert("Oder Placed Successfully");
+                toast.success("Order Placed Successfully")
                 cartCtx.clearCart();
                 navigate("/orders", { replace: true })
 
             } else {
                 alert("Something went wrong");
+                toast.error("Something went wrong")
                 console.log(response);
             }
         } catch (error) {

@@ -58,10 +58,10 @@
 }
 
 
-@media screen and (max-width:500px){
+@media screen and (max-width:1024px){
   .button {
-    padding: 0.5rem .7rem;
-    border-radius: 18px;
+    padding: 0.4rem .6rem;
+    border-radius: 14px;
   }
   
   .button:hover,
@@ -80,5 +80,29 @@
     padding: 0.1rem .5rem;
     border-radius: 15px;
     margin-left: .5rem;
+  }
+}
+@media screen and (max-width:450px){
+  .button {
+    padding: 0.4rem .5rem;
+    border-radius: 14px;
+  }
+  
+  .button:hover,
+  .button:active {
+    background-color: #3f0d0d;
+    transform:  scale(1.01);
+  }
+  
+  .icon {
+    width: 1.15rem;
+    height: 1.35rem;
+  }
+  
+  .badge {
+    background-color: #b94517;
+    padding: 0.1rem .3rem;
+    border-radius: 15px;
+    margin-left: 5px;
   }
 }
