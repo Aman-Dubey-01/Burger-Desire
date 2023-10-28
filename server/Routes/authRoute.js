@@ -4,7 +4,7 @@ const cors = require('cors');
 const { registerUser, loginUser, getUser, logoutUser } = require('../Controllers/authController');
 
 router.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL,
     credentials: true,
 }));
 

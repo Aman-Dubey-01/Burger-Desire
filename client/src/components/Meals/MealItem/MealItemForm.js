@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import Input from '../../UI/Input';
 import classes from './MealItemForm.module.css';
 import { Button } from '../../UI/Button';
+import {toast} from 'react-hot-toast';
 
 const MealItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
@@ -23,6 +24,7 @@ const MealItemForm = (props) => {
       return;
     }
 
+    toast.success("Item Added to Cart")
     props.onAddToCart(enteredAmountNumber);
   };
 
@@ -40,7 +42,7 @@ const MealItemForm = (props) => {
           defaultValue: '1',
         }}
       />
-      <Button value={'Add to Cart'}/>
+      <Button value={'Add to Cart'} />
       {!amountIsValid && <p>Please enter a valid amount (1-5).</p>}
     </form>
   );

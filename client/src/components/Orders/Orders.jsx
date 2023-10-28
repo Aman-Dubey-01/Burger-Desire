@@ -55,7 +55,7 @@ function Orders() {
                     {loading ? (
                         <p>Loading...</p>
                     ) : orders ? (
-                        <div className={classes.orders}>
+                        <div className={classes.orders} data-aos="zoom-in">
                             {orders.map((order) => (
                                 <SingleOrder key={order.id} order={order} />
                             ))}

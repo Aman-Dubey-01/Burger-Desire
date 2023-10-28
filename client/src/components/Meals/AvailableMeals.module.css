@@ -1,9 +1,3 @@
-/* .meals {
-  max-width: 60rem;
-  width: 90%;
-  margin: 2rem auto;
-  animation: meals-appear 1s ease-out forwards;
-} */
 
 .meal_section {
   margin: auto;
@@ -11,6 +5,7 @@
   background-image: url(../../assets/mg_main.png);
   /* line-height: 15px; */
 }
+
 
 .meal_sec__head h3 {
   font-family: 'Dancing Script', cursive;

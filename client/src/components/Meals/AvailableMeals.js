@@ -66,7 +66,7 @@ const AvailableMeals = () => {
           <h3>Top meals</h3>
           <h2>Delicious Meals</h2>
         </div>
-        <Carousel responsive={responsive} showDots={false} infinite={true} autoPlaySpeed={1400} draggable={true} >
+        <Carousel responsive={responsive} showDots={false} infinite={true} autoPlaySpeed={1400} draggable={true} className={classes.Carousel} >
           {mealsList}
         </Carousel>
         <div className={classes.button_meal}>

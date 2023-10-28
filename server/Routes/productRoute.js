@@ -4,7 +4,7 @@ const cors = require('cors');
 const { getProduct, createProduct, getProductById } = require('../Controllers/productController');
 
 router.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL,
     credentials: true,
 }));
 

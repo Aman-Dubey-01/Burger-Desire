@@ -6,6 +6,8 @@ import { Button } from '../UI/Button';
 
 import mealsImage from '../../assets/main2.jpg';
 import MealsSummary from '../Meals/MealsSummary';
+
+
 const Welcome = () => {
     return (
         <>
