@@ -2,7 +2,6 @@ import classes from './SmallCartItem.module.css';
 
 const SmallCartItem = (props) => {
     const price = `₹${props.price}`;
-    const totalprice = `₹${(props.price * props.amount).toFixed(2)}`;
 
     return (
         <div >

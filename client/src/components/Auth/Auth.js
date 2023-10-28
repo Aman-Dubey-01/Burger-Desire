@@ -3,7 +3,6 @@ import style from './Auth.module.css'
 import log from '../../assets/log.svg';
 import register from '../../assets/register.svg';
 import { AiTwotoneLock, AiOutlineMail, AiOutlineGoogle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';

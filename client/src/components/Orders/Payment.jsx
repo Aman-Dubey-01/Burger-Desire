@@ -7,7 +7,6 @@ function Payment() {
   const { items, totalAmount } = cartCtx;
   const [isPaymentSubmitted, setPaymentSubmitted] = useState(false);
   const [orders, setOrders] = useState([]);
-  const [productDetails, setProductDetails] = useState([]);
 
 
   const handleSubmitOrder = async () => {
