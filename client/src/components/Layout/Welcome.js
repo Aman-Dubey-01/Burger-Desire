@@ -4,7 +4,7 @@ import img from '../../assets/bg.png';
 import img2 from '../../assets/bg_Left.png';
 import { Button } from '../UI/Button';
 
-import mealsImage from '../../assets/main2.jpg';
+import mealsImage from '../../assets/main.jpg';
 import MealsSummary from '../Meals/MealsSummary';
 
 
