@@ -36,7 +36,6 @@ function Auth() {
             ...prevSignUp,
             [name]: value,
         }));
-        console.log(signUp);
     };
 
 
@@ -67,7 +66,6 @@ function Auth() {
             ...prevSignIn,
             [name]: value,
         }));
-        console.log(signIn);
     };
 
 
@@ -81,7 +79,6 @@ function Auth() {
             if (data.error) {
                 toast.error(data.error)
             } else {
-                console.log("user signin:", data);
                 setUser(data)  //remove if not needed
                 setSignIn({ email: '', password: '' })
                 toast.success(data.message)

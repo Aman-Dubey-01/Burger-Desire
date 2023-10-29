@@ -4,6 +4,7 @@ import classes from './Orders.module.css';
 import Message, { EmptyCart } from '../UI/Message';
 import SingleOrder from './SingleOrder';
 import { UserContext } from '../../store/userContext';
+import {toast} from 'react-hot-toast';
 
 function Orders() {
     const [orders, setOrders] = useState([]);
@@ -12,22 +13,26 @@ function Orders() {
 
     const fetchOrders = async (userId) => {
         try {
+            console.log('user id order', userId);
             const response = await axios.get(`/order/${userId}/getorder`, {
+                
                 headers: {
                     'Content-Type': 'application/json',
-                },
+                }, 
             });
 
             if (response.status === 200) {
-                setOrders(response.data.orders);
+                setOrders((response.data.orders).reverse());
                 setLoading(false);
-            } else {
+            } if (response.status === 400) {
+                setLoading(false);
+            }else {
                 setLoading(false);
                 console.log('error');
             }
         } catch (error) {
             setLoading(false);
-            console.error('Error fetching the order:', error);
+            toast.error('Error occured, try refreshing the page');
         }
     };
 

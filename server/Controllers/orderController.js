@@ -32,15 +32,22 @@ exports.getAllOrders = async (req, res) => {
 // Update the backend code to get orders for a specific user
 exports.getUserOrders = async (req, res) => {
     try {
-      const { userId } = req.params;
-      const orders = await Order.find({ user: userId }).populate('items.product');
-      return res.status(200).json({ message: "User orders fetched successfully", orders });
+        const { userId } = req.params;
+
+        if (!userId || userId === 'undefined') {
+            return res.status(400).json({ error: 'Error occured, try refreshing the page' });
+        }else{
+            const orders = await Order.find({ user: userId }).populate('items.product');
+            return res.status(200).json({ message: "User orders fetched successfully", orders });
+        }
+        // const orders = await Order.find({ user: userId }).populate('items.product');
+        // return res.status(200).json({ message: "User orders fetched successfully", orders });
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Error fetching user orders' });
+        console.error(error);
+        res.status(500).json({ error: 'Error occured, try refreshing the page' });
     }
-  };
-  
+};
+
 
 // Update order status
 exports.updateOrderStatus = async (req, res) => {

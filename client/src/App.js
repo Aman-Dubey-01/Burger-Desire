@@ -13,11 +13,9 @@ import Auth from "./components/Auth/Auth";
 import { UserContextProvider } from "./store/userContext";
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
-import Payment from "./components/Orders/Payment";
 import Checkout from "./components/Orders/Checkout";
 import Orders from "./components/Orders/Orders";
 
-// import ProductItem from "./components/ProductItem";
 
 AOS.init({
   offset: 100,
@@ -41,7 +39,6 @@ function App() {
         <Routes>
           <Route path="/" element=<Main /> />
           <Route path="/Cart" element=<NewCart /> />
-          <Route path="/payment" element=<Payment /> />
           <Route path="/checkout" element=<Checkout /> />
           <Route path="/orders" element=<Orders /> />
           <Route path="/Menu" element=<FetchData /> />

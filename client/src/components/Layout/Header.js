@@ -29,7 +29,7 @@ const Header = (props) => {
     }
   }
 
-  useEffect(() => {}
+  useEffect(() => { }
     , [user])
 
   return (
@@ -37,7 +37,7 @@ const Header = (props) => {
       <header className={classes.header}>
         <Link to='/'>
           <div className={classes.headlogo} >
-          
+
             <h2><span>🍔</span>𝕭𝖚𝖗𝖌𝖊𝖗 𝕯𝖊𝖘𝖎𝖗𝖊</h2>
           </div>
         </Link>
