@@ -91,7 +91,6 @@ const CartProvider = (props) => {
   
   useEffect(() => {
     const storedCartData = JSON.parse(sessionStorage.getItem(CART_STORAGE_KEY));
-    console.log('Stored Cart Data:', storedCartData);
     if (storedCartData) {
       dispatchCartAction({ type: 'SET', data: storedCartData });
     }

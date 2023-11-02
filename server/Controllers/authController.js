@@ -59,7 +59,7 @@ const loginUser = async (req, res) => {
                         if (err) {
                             console.log(err);
                         }
-                        return res.cookie('token', token, { expiresIn: '1d' }).json({ message: 'Login successful' });
+                        return res.cookie('token', token, { expiresIn: '1d',sameSite: 'Lax', }).json({ message: 'Login successful' ,user: user});
                     });
 
                 } else {

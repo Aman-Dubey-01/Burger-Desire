@@ -10,7 +10,6 @@ function Menu({ mealData }) {
 
   const uniqueList = ["Pizza", "Burger", "Sandwich", "Pasta", "Indian", "Chinese", "All"];
   const [meals, setMeals] = useState(mealData);
-  console.log("mealData",mealData);
 
   const mealsList = meals.map((meal) => (
     <MealItem

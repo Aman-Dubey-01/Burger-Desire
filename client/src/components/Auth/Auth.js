@@ -79,7 +79,7 @@ function Auth() {
             if (data.error) {
                 toast.error(data.error)
             } else {
-                setUser(data)  //remove if not needed
+                setUser(data.user)   //remove if not needed
                 setSignIn({ email: '', password: '' })
                 toast.success(data.message)
                 navigate('/')

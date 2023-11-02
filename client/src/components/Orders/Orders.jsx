@@ -13,7 +13,6 @@ function Orders() {
 
     const fetchOrders = async (userId) => {
         try {
-            console.log('user id order', userId);
             const response = await axios.get(`/order/${userId}/getorder`, {
                 
                 headers: {
@@ -32,19 +31,19 @@ function Orders() {
             }
         } catch (error) {
             setLoading(false);
-            toast.error('Error occured, try refreshing the page');
+            // toast.error('Error occured, try refreshing the page');
         }
     };
 
     useEffect(() => {
         if (user) {
-            fetchOrders(user.id);
+            fetchOrders(user._id);
         }
     }, [user]);
 
     useEffect(() => {
         if (user) {
-            fetchOrders(user.id);
+            fetchOrders(user._id);
         } else {
             setLoading(false);
         }
@@ -55,7 +54,8 @@ function Orders() {
             {user ? (
                 <div>
                     <h1 className={classes.order_head}>My Orders</h1>
-                    {!(orders.length > 0) && <h6 className={classes.order_err}>**Refresh the page if orders are not visible</h6>}
+                    {!(orders.length > 0) && <><h6 className={classes.order_err}>**Refresh the page if orders are not visible</h6>
+                    <button onClick={fetchOrders(user.id)}>fetch</button></>}
                     
                     {loading ? (
                         <p>Loading...</p>
